@@ -20,7 +20,7 @@ Company.create(
   name: "Uvize",
   url: "https://www.uvize.com",
   employees_count: 4,
-  total_funding: 1,
+  total_funding: 500,
   stage: "Pre Series A",
   year_founded: 2.years.ago,
   qualification: "2 of 4 vet cofounders",

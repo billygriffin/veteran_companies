@@ -4,7 +4,7 @@
   <p>Name: <%= company.name %><br>
   Website: <%= link_to company.name, company.url %><br>
   Employees: <%= company.employees_count %><br>
-  Total Funding: <%= company.total_funding == 0 ? "Bootstrap yo" : company.total_funding %><br>
+  Total Funding: <%= company.total_funding == 0 ? "Bootstrap yo" : "#{company.total_funding}k" %><br>
   Stage: <%= company.stage %><br>
   Year Founded: <%= company.year_founded.strftime("%Y") %><br>
   Qualification: <%= company.qualification %><br></p>
