@@ -15,3 +15,14 @@ Company.create(
   year_founded: 4.years.ago,
   qualification: "2 of 2 vet cofounders",
   status: "active")
+
+Company.create(
+  name: "Uvize",
+  url: "https://www.uvize.com",
+  employees_count: 4,
+  total_funding: 1,
+  stage: "Pre Series A",
+  year_founded: 2.years.ago,
+  qualification: "2 of 4 vet cofounders",
+  status: "active"
+  )
