@@ -1,0 +1,11 @@
+<h1>Dis is da veteran-led companies yo</h1>
+
+<% @companies.each do |company| %>
+  Name: <%= company.name %><br>
+  Website: <%= link_to company.name, company.url %><br>
+  Employees: <%= company.employees_count %><br>
+  Total Funding: <%= company.total_funding == 0 ? "Bootstrap yo" : company.total_funding %><br>
+  Stage: <%= company.stage %><br>
+  Year Founded: <%= company.year_founded.strftime("%Y") %><br>
+  Qualification: <%= company.qualification %><br>
+<% end %>
