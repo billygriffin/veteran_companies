@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150717052133) do
+ActiveRecord::Schema.define(version: 20150717191907) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "affiliations", force: :cascade do |t|
+    t.integer  "organization_id"
+    t.integer  "company_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "affiliations", ["company_id"], name: "index_affiliations_on_company_id", using: :btree
+  add_index "affiliations", ["organization_id"], name: "index_affiliations_on_organization_id", using: :btree
 
   create_table "companies", force: :cascade do |t|
     t.string   "name",                                null: false
@@ -31,6 +41,13 @@ ActiveRecord::Schema.define(version: 20150717052133) do
 
   create_table "founders", force: :cascade do |t|
     t.string   "name",       null: false
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "organizations", force: :cascade do |t|
+    t.string   "name"
     t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
