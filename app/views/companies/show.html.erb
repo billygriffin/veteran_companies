@@ -1,0 +1,9 @@
+<h2><%= @company.name %></h2>
+Website: <%= link_to @company.name, @company.url %><br>
+Employees: <%= @company.employees_count %><br>
+Total Funding: <%= @company.total_funding == 0 ? "Bootstrap yo" : "#{@company.total_funding}k" %><br>
+Stage: <%= @company.stage %><br>
+Year Founded: <%= @company.year_founded.strftime("%Y") %><br>
+Qualification: <%= @company.qualification %><br>
+
+<h4><%= link_to "Back to companies list", companies_path %></h4>
