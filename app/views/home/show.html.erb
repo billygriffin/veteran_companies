@@ -1,2 +1,12 @@
-<h1>Welcome to VetCo!</h1>
-<h3><%= link_to "View veteran-led companies", companies_path %><h3>
+<%= content_for :full_bleed do %>
+  <div id="welcome-area">
+    <div id="home-cover-area">
+      <div id="welcome-background"></div>
+      <div id="welcome-content">
+        <h1 class="welcome-tagline">Welcome to VetCo</h1>
+        <h2 class="welcome-subtagline">The authoritative source for veteran-led startups</h2>
+        <%= link_to "View Companies", companies_path, class: 'btn view-companies-button' %>
+      </div>
+    </div>
+  </div>
+<%- end %>
