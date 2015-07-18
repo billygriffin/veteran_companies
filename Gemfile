@@ -36,6 +36,8 @@ gem 'font_assets'
 gem 'simple_form'
 gem 'draper'
 
+gem 'rails_12factor', group: :production
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
