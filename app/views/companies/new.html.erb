@@ -1,0 +1,21 @@
+<%= simple_form_for(@company) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :name %>
+  <%= f.input :url, label: 'Website' %>
+  <%= f.input :employees_count, label: '# of Employees' %>
+  <%= f.input :total_funding, hint: 'Number in thousands of dollars' %>
+  <%= f.input :stage %>
+  <%= f.input :year_founded, as: :date, html5: true %>
+  <%= f.input :qualification %>
+
+  <%= f.button :submit %>
+
+<h4>OR</h4>
+
+<p>Email this to someone else</p>
+
+<input id="email-link"></input>
+<button>Send</button>
+
+<% end %>
