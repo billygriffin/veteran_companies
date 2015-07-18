@@ -1,0 +1,50 @@
+// --------------------------------------------------------
+//
+// Responsive image helper
+//
+// --------------------------------------------------------
+
+@mixin respond-retina($media) 
+  @if $media == nonretina 
+    @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 143dppx) 
+      @content
+  @else if $media == retina 
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dppx) 
+      @content
+
+// example: 
+// @include respond-retina(nonretina)
+//   background: url($png-rollit-logo) center center no-repeat
+
+// --------------------------------------------------------
+//
+// Responsive override helpers
+//
+// --------------------------------------------------------
+
+// Widths
+@mixin respond-above($min-size) 
+  @media screen and (min-width: $min-size)
+    @content
+@mixin respond-below($max-size) 
+  @media screen and (max-width: $max-size)
+    @content
+@mixin respond-between($min-size, $max-size) 
+  @media screen and (min-width: $min-size) and (max-width: $max-size)
+    @content
+
+// Heights
+@mixin respond-above-ht($min-size) 
+  @media screen and (min-height: $min-size)
+    @content
+@mixin respond-below-ht($max-size) 
+  @media screen and (max-height: $max-size)
+    @content
+
+// example: 
+// .icon-small-play:after
+//   @include respond-below($media-768)
+//     top: -27px
+//   @include respond-below($media-600)
+//     top: -75px
+

@@ -1,0 +1,87 @@
+#welcome-area {
+  position: absolute;
+  width: 100%;
+  top: 72px;
+  bottom: 0px;
+
+  @include respond-below($media-580) {
+    top: 58px;
+  }
+
+  #home-cover-area {
+
+    #welcome-background {
+      background-image: url("/assets/_test_home_pel_photo.jpg");
+      // override for mobile class and/or mobile app class
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    #welcome-content {
+      position: absolute;
+      left: 50%;
+      top: 20%;
+      width: 480px;
+      margin-left: -240px;
+      text-align: center;
+      @include respond-below($media-480) {
+        width: 304px;
+        margin-left: -152px;
+      }
+
+      a.btn {
+        margin-top: 20px;
+
+        &:first-of-type {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    h1.welcome-tagline {
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 30px;
+      margin-bottom: 4px;
+      text-shadow: 0px 1px 1px #333;
+
+      @include respond-below($media-400) {
+        font-size: 22px;
+      }
+    }
+
+    h2.welcome-subtagline {
+      text-transform: uppercase;
+      width: 400px;
+      margin: 0 auto;
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 20px;
+      text-shadow: 0px 1px 1px #333;
+
+      @include respond-below($media-580) {
+        font-size: 15px;
+        width: 304px;
+      }
+    }
+
+  } 
+}
+
+.content-wrap.home {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  padding-bottom: 0;
+  background: #fff;
+
+  .container.content {
+    margin: 30px auto 102px auto;
+    border: 0;
+  }
+}

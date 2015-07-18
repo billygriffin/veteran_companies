@@ -1,0 +1,61 @@
+#sb-title-inner,#sb-info-inner,#sb-loading-inner,div.sb-message{}
+#sb-container{position:fixed;margin:0;padding:0;top:0;left:0;z-index:999;text-align:left;visibility:hidden;display:none;}
+#sb-overlay{position:relative;height:100%;width:100%;}
+#sb-wrapper{position:absolute;visibility:hidden;width:100px;}
+#sb-wrapper-inner{position:relative;border:1px solid #303030;overflow:hidden;height:100px;}
+#sb-body{position:relative;height:100%;}
+#sb-body-inner{position:absolute;height:100%;width:100%;}
+#sb-player.html{height:100%;overflow:auto;}
+#sb-body img{border:none;}
+#sb-loading{position:relative;height:100%;}
+#sb-loading-inner{position:absolute;font-size:0;line-height:24px;height:50px;top:50%;margin-top:-25px;width:100%;text-align:center;}
+#sb-loading-inner span{background:url(/assets/loading.gif) no-repeat;padding-left:0;display:inline-block;height:50px;width:50px;}
+#sb-body,#sb-loading{background-color:#060606;}
+#sb-title,#sb-info{position:relative;margin:0;padding:0;overflow:hidden;}
+#sb-title,#sb-title-inner{height:26px;line-height:26px;}
+#sb-title-inner{font-size:16px;}
+#sb-info,#sb-info-inner{height:53px;line-height:53px;background: #F7F7F7;}
+#sb-info{
+  text-indent: 40px;
+  @include border-radius(0 0 5px 5px);
+}
+#sb-info-inner{
+  font-size:12px;
+  @include border-radius(0 0 5px 0);
+}
+#sb-nav{float:right;height:100%;padding:0 0;width:45%;}
+#sb-nav-next,#sb-nav-previous{
+  
+  display:block;
+  float:
+  right;
+  height:100%;
+  width:59px;
+  border-left:1px solid #B0B0B0; 
+  cursor:pointer;
+  background-repeat:no-repeat;
+  opacity:.6;
+  @include transition(opacity .2s linear);
+
+  &:hover{
+    opacity: 1;
+  }
+}
+#sb-nav-close{
+  position: absolute;
+  top:16px;
+  left:14px;
+  display: block;
+  text-indent: -9999px;
+  background: url('/assets/sprite.png') -62px -84px !important;
+  width:19px;
+  height:19px; }
+#sb-nav-next{background:url(/assets/slideshow-nav.png) 100% 0 !important;}
+#sb-nav-previous{background:url(/assets/slideshow-nav.png) 0 0 !important;}
+#sb-nav-play{display: none;}
+#sb-nav-pause{display: none;}
+#sb-counter{float:left;width:45%;}
+#sb-counter a{padding:0 4px 0 0;text-decoration:none;cursor:pointer;color:#fff;}
+#sb-counter a.sb-counter-current{text-decoration:underline;}
+div.sb-message{font-size:12px;padding:10px;text-align:center;}
+div.sb-message a:link,div.sb-message a:visited{color:#fff;text-decoration:underline;}

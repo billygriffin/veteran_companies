@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  /* overflow-x: hidden; */
+  width: 100%;
+  background: #EDEDEB;
+}
+
+// 102px is 72px for foot height plus 30px padding
+.content-wrap{
+  @extend .clearfix;
+  padding-bottom: 102px;
+  
+  @include respond-below($media-768) {
+    padding-bottom: 71px;
+  }
+}
+
+.mobile-app {
+  .content-wrap{
+    padding-bottom: 0;
+  }
+}
+
+.container{
+  width:90%;
+  min-width:$min-site-width;
+  max-width:$max-site-width;
+  margin:0 auto;
+  clear: both;
+
+  @include respond-below($media-768) {
+    width: 100%;
+    min-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  &.account-forms,
+  &.content.account-forms {
+    width: 700px;
+    left: 50%;
+    margin: 30px 0 30px -350px; 
+
+    @include respond-below($media-768) {
+      width: 90%;
+      left: 50%;
+      margin: 15px -45% 15px;
+      min-width: 0;
+    }
+
+    @include respond-below($media-580) {
+      width: 100%;
+      left: 0%;
+      margin: 0 0 15px;
+    }
+  }
+
+  &.single-column {
+
+    @include respond-below($media-768) {
+      padding: 0;
+    }
+
+  }
+}
+
+.container-narrow{
+  width:650px;
+}
+
+
+.content{
+  border: 1px solid #C3C4C5;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+
+  @include respond-below($media-768) {
+  }
+  @include respond-below($media-580) {
+    border: 0;
+    border-radius: 0;
+    overflow: visible;
+  }
+}
+
+.container.content {
+  margin: 30px auto 30px auto;
+
+  /* @include respond-below($media-768) {
+    margin: 15px auto 15px auto;
+  } */
+
+  @include respond-below($media-768) {
+    margin: 0 auto;
+  }
+}
+
+.columns-container{
+  @extend .clearfix;
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+
+  @include respond-below($media-768) {
+    display: block;
+  }
+}
+
+/* Small left sidebar w/large right content column */
+.category-list-col{
+  width: 220px;
+  min-width: 220px;
+  height: 100%;
+  display: table-cell;
+  vertical-align: top;
+  border-right:1px solid #C3C4C5;
+  background: #EDEDEB;
+}
+
+.establishment-list-col{
+  display: table-cell;
+  vertical-align: top;
+}
+
+/* Split screen, 2 columns */
+
+.content-column-left {
+  @extend .clearfix;
+  float: left;
+  width: 50%;
+  padding: 0 10px 0 25px;
+}
+
+.content-column-right {
+  @extend .clearfix;
+  float: right;
+  width: 50%;
+  padding: 0 25px 0 10px;
+}
+
+@include respond-below($media-768) {
+  .content-column-left,
+  .content-column-right {
+    width: 100%;
+    display: block;
+    float: none;
+    padding: 0;
+  }
+}
+
+
+
+/* Pattern background */
+
+.pattern-background {
+  background: url("/assets/camo-header-bg.png");
+  background-size: cover;
+  text-shadow: 0 1px 1px #fff;
+}
+
+
+
+
+.sidebar{
+  background: #F7F7F5;
+  @include border-radius(3px);
+  /*padding-bottom: 99999px;
+  margin-bottom:-99999px;*/
+
+  &.left{
+    border-right:1px solid #C3C4C5;
+    left:0;
+  }
+  &.right{
+    border-left:1px solid #C3C4C5;
+    right:0;
+  }
+}
+
+section{
+  margin: 20px 0;
+  @include respond-below($media-768) {
+    margin: 10px 0;
+  }
+}
+
+/* --- Gridpak variables ---*/ 
+$max_columns: 12;
+$padding: 0 25px;
+$gutter_px: 0px;
+$gutter_pc: 0;
+@mixin col {
+    float:left;
+    @include box-sizing(border-box);
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+    padding-left:25px;
+    padding-right:25px;
+    margin-left:$gutter_pc;
+}
+
+@mixin span($num, $gutter_pc, $gutter_px, $padding, $max_columns) {
+    $one_col: (100% - ($gutter_pc * ($max_columns - 1))) / $max_columns;
+    width:($one_col * $num) + ($gutter_pc * ($num - 1));
+}
+
+.row {
+  width: 100%;
+  *zoom: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.row:after {
+  clear: both;
+}
+.row [class*="span"] {
+   @include col;
+}
+.row [class*="span"].right {
+   float:right;
+}
+.row [class*="span"]:first-child{
+    margin-left:0;
+}
+.row{
+   .span1  {@include span(1, $gutter_pc, $gutter_px, $padding, $max_columns);}
+   .span2  {@include span(2, $gutter_pc, $gutter_px, $padding, $max_columns);}
+   .span3  {@include span(3, $gutter_pc, $gutter_px, $padding, $max_columns);}
+   .span4  {@include span(4, $gutter_pc, $gutter_px, $padding, $max_columns);}
+   .span5  {@include span(5, $gutter_pc, $gutter_px, $padding, $max_columns);}
+   .span6  {@include span(6, $gutter_pc, $gutter_px, $padding, $max_columns);}
+   .span7  {@include span(7, $gutter_pc, $gutter_px, $padding, $max_columns);}
+   .span8  {@include span(8, $gutter_pc, $gutter_px, $padding, $max_columns);}
+   .span9  {@include span(9, $gutter_pc, $gutter_px, $padding, $max_columns);}
+   .span10 {@include span(10, $gutter_pc, $gutter_px, $padding, $max_columns);}
+   .span11 {@include span(11, $gutter_pc, $gutter_px, $padding, $max_columns);}
+   .span12 {width:100%;} 
+}

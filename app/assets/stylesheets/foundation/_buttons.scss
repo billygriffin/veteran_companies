@@ -1,0 +1,270 @@
+/********************************
+  BUTTONS BUTTONS BUTTONS
+********************************/
+
+.btn {
+  display: inline-block;
+  *display: inline;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  *margin-left: .3em;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 20px;
+  color: $defaultColor;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #fffeff;
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  #fffeff 0%,#f5f6f5 100%));
+  border: 1px solid #dedede;
+  @include border-radius(3px);
+  *zoom: 1; 
+}
+
+.btn:hover,
+// .btn:focus,
+//.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+    background-color: #fbfbfb;
+  @include filter-gradient(#fbfbfb, #e8e8e6, vertical);
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  #fbfbfb 0%,#e8e8e6 100%));
+}
+
+.btn:hover,
+.btn.active {
+  color: $btnHoverColor;
+}
+
+
+//.btn:active,
+.btn.active {
+    @include box-shadow(inset 0 0 2px rgba(0,0,0,.1));
+    background-color: #e8e8e6;
+  @include filter-gradient(#e8e8e6, #fbfbfb, vertical);
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  #e8e8e6 0%,#fbfbfb 100%));
+}
+
+.btn:hover,
+.btn:focus {
+    text-decoration: none;
+  transition: background-color 0.1s linear;
+}
+
+.btn:focus {
+  outline: thin dotted #333;
+}
+
+.btn.disabled,
+.btn[disabled] {
+  cursor: default;
+  @include opacity(.5);
+}
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  @include box-sizing(border-box);
+}
+
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+.btn-primary{
+  background-color: #96ae59;
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  #96ae59 0%,#7d9448 100%));
+  border:1px solid #57803D;
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.18));
+  text-shadow:1px 1px 1px rgba(0,0,0,.33);
+  font-size: em(16);
+  padding: 10px 18px;
+  color: #fff;
+  font-weight: bold;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+    color: #fff;
+    background-color: darken(#96ae59, 5);
+  @include filter-gradient(darken(#96ae59, 5), darken(#7d9448,5), vertical);
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  darken(#96ae59, 5) 0%,darken(#7d9448,5) 100%));
+}
+.btn-primary.active,
+.btn-primary:active{
+  background-color: darken(#7d9448,5);
+  @include filter-gradient(darken(#7d9448,5), darken(#96ae59, 5), vertical);
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  darken(#7d9448,5) 0%,darken(#96ae59, 5) 100%));
+}
+.btn-small{
+  padding: 6px 12px;
+  font-size: 1em;
+}
+.btn-big{
+  font-size:em(14);
+  padding: 12px 20px;
+}
+.btn-toolbar {
+  @extend .clearfix;
+  position: relative;
+  display: block;
+  *margin-left: .3em;
+  white-space: nowrap;
+  vertical-align: middle;
+  *zoom: 1;
+}
+
+.btn-toolbar:first-child {
+  *margin-left: 0;
+}
+.btn-toolbar > .btn {
+  position: relative;
+  display: block;
+  float: left;
+  @include border-radius(0);
+}
+.btn-toolbar > .btn + .btn {
+  margin-left: -1px;
+}
+.btn-toolbar > .btn:first-child {
+  margin-left: 0;
+  @include border-radius(3px 0 0 3px);
+}
+
+.btn-toolbar > .btn:last-child,
+.btn-toolbar > .dropdown-toggle {
+  @include border-radius(0 3px 3px 0);
+}
+.btn-toolbar > .btn:hover,
+.btn-toolbar > .btn:focus,
+.btn-toolbar > .btn:active,
+.btn-toolbar > .btn.active {
+  z-index: 2;
+}
+
+.btn-danger {
+  background-color: #ee4d4d;
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  #ee4d4d 0%,#f40707 100%));
+  border:1px solid #57803D;
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.18));
+  text-shadow:1px 1px 1px rgba(0,0,0,.33);
+  font-size: em(16);
+  padding: 10px 18px;
+  color: #fff;
+  font-weight: bold;
+}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.btn-danger.disabled,
+.btn-danger[disabled] {
+    color: #fff;
+    background-color: darken(#ee4d4d, 5);
+  @include filter-gradient(darken(#ee4d4d, 5), darken(#f40707,5), vertical);
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  darken(#ee4d4d, 5) 0%,darken(#f40707,5) 100%));
+}
+.btn-danger.active,
+.btn-danger:active{
+  background-color: darken(#f40707,5);
+  @include filter-gradient(darken(#f40707,5), darken(#ee4d4d, 5), vertical);
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  darken(#f40707,5) 0%,darken(#ee4d4d, 5) 100%));
+}
+
+.btn-yes {
+  width: 30%;
+  margin: 0 0 20px 55px;
+  padding: 10px 15px;
+
+  @include respond-below($media-768) {
+    margin: 0 0 20px 16%;
+  }
+}
+
+.btn-no {
+  width: 30%;
+  margin: 0 0 20px 20px;
+  padding: 10px 15px;
+}
+
+
+/* Awesome buttons */
+
+.promo-action-button {
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.18));
+  background-color: #B4CF2F;
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  #B4CF2F 0%,darken(#B4CF2F,10) 100%));
+  border:1px solid #57803D;
+  text-shadow:1px 1px 1px rgba(0,0,0,.33);
+  font-size: 16px;
+  color: #fff;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.disabled,
+  &[disabled] {
+    color: #fff;
+    background-color: darken(#B4CF2F, 5);
+    @include filter-gradient(darken(#B4CF2F, 5), darken(#B4CF2F,15), vertical);
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(top,  darken(#B4CF2F, 5) 0%,darken(#B4CF2F,15) 100%));
+  }
+  &:active{
+    background-color: darken(#B4CF2F,15);
+    @include filter-gradient(darken(#B4CF2F,15), darken(#B4CF2F, 5), vertical);
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(top,  darken(#B4CF2F,15) 0%,darken(#B4CF2F, 5) 100%));
+  }
+}
+
+.dropdown-toggle-button {
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.18));
+  background-color: #777777;
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  #777777 0%,darken(#777777,10) 100%));
+  border:1px solid #777777;
+  text-shadow:1px 1px 1px rgba(0,0,0,.33);
+  font-size: 16px;
+  color: #fff;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.disabled,
+  &[disabled] {
+    color: #fff;
+    background-color: darken(#777777, 5);
+    @include filter-gradient(darken(#777777, 5), darken(#777777,15), vertical);
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(top,  darken(#777777, 5) 0%,darken(#777777,15) 100%));
+  }
+  &:active{
+    background-color: darken(#777777,15);
+    @include filter-gradient(darken(#777777,15), darken(#777777, 5), vertical);
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(top,  darken(#777777,15) 0%,darken(#777777, 5) 100%));
+  }
+}
+
+.admin-edit {
+  color: red;
+  float: right;
+}
+
+

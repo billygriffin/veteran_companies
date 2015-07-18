@@ -1,0 +1,148 @@
+#header{
+  background-color: #464c4d;
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  #464c4d 0%,#373c3d 100%));
+  border-bottom: 1px solid #373C3D;
+  height: 72px;
+  position: relative;
+  z-index: 2;
+
+  .container {
+    padding: 0;
+
+    @include respond-below($media-768) {
+      padding: 0px 10px;
+    }
+  }
+
+  .logo{
+    float:left;
+    width:293px;
+    height:38px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 16px 0 0 0;
+
+    // a{
+    //   height: 100%;
+    //   display: block;
+    //   text-indent: -9999px;
+    //   overflow: hidden;
+    //   body.ie8 & {
+    //     background-image: url("/assets/sprite.png");
+    //   }
+    //   @include respond-retina(nonretina) {
+    //     background-image: url("/assets/sprite.png");
+    //   }
+    //   @include respond-retina(retina) {
+    //     background-image: url("/assets/sprite-2x.png");
+    //     background-size: 296px 170px;
+    //   }
+    // }
+
+    // @include respond-below($media-880) {
+    //   width: 210px;
+    //   height: 31px;
+    //   margin: 21px 0 0 0;
+    //   a{
+    //     background-position: 0 -133px;
+    //   }
+    // }
+
+  }
+
+  nav {
+    float:right;
+    margin-top:18px;
+    width: 440px;
+
+    a {
+      font-weight: bold;
+      color: #DADEDF;
+      text-shadow:0 1px 1px rgba(0,0,0,.5);
+      display: inline-block;
+      margin:9px 12px 0 12px;
+      text-decoration: none;
+      @include transition(color .2s linear);
+
+      &:hover{
+        color:#fff;
+      }
+    }
+
+    .btn {
+      float: right;
+      border-radius: 3px;
+      border: 0;
+      padding: 8px 20px;
+      margin: 0;
+      @include background-image(linear-gradient(top, #B1C96B 0%, #829A54 100%));
+      color: #333;
+      text-shadow: none;
+
+      &:hover,&:active,&.active{
+        @include background-image(linear-gradient(top, darken(#B1C96B, 5%) 0%, darken(#829A54, 5%) 100%));
+        color: #333;
+      }
+
+    }
+
+    .btn-signup{
+      background: #515758
+    }
+
+  }  
+}
+
+/* Mid-sized mobile devices */
+@include respond-between($media-580, $media-768) {
+
+  #header {
+    nav {
+      width: 100%;
+      margin-left: -215px;
+      text-align: right;
+    }
+
+    nav form {
+      width: 70%;
+    }
+
+    nav .btn {
+      padding: 8px 10px;
+    }
+  }
+}
+
+/* Phone-sized mobile devices */
+@include respond-below($media-580) {
+  #header {
+    height: 58px;
+
+    .container {
+      padding: 0 8px;
+    }
+
+    .logo {
+      margin-top: 15px;
+      width: 35px;
+      height: 27px;
+
+      a{
+        background-position: -217px -133px;
+      }
+
+    }
+
+    nav {
+      margin-top: 11px;
+      width: 250px;
+    }
+
+    nav .btn {
+      padding: 8px 0;
+      width: 75px;
+      white-space: nowrap;
+    }
+  }
+}
