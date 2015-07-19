@@ -25,4 +25,10 @@ Company.create(
   year_founded: 2.years.ago,
   qualification: "2 of 4 vet cofounders",
   status: "active"
-  )
+)
+
+Admin.create(
+  email: 'admin@vetco.com',
+  password: 'password',
+  password_confirmation: 'password'
+)

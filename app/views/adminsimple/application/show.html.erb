@@ -1,0 +1,13 @@
+<%= page_header title: "#{resource_title} Details" do %>
+  <%- if controller.respond_to?(:edit) %>
+    <%= link_to "Edit #{resource_title}", edit_resource_path(resource), class: "btn btn-primary icon-#{resource_icon}" %>
+  <%- end %>
+<%- end %>
+  
+<%= render partial: 'details' %>
+
+<%- if !request.xhr? && controller.respond_to?(:destroy) %>
+  <hr/>
+  <%= link_to 'Delete', resource_path(resource), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
+  <%= content_for :actions %>
+<%- end %>

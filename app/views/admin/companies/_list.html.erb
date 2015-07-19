@@ -1,0 +1,20 @@
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th class='controls'></th>
+      <th class='hidden-xs hidden-sm hidden-md' width='10px'>ID</th>
+      <th>Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%- (@collection || collection).each do |resource| %>
+      <tr>
+        <td class='controls'><%= link_to '', edit_resource_path(resource), class: 'btn btn-default icon-edit' %></td>
+        <td class="" ass='hidden-xs hidden-sm hidden-md'><%= resource.id %></td>
+        <td><%= link_to resource.name, admin_company_path(resource) %></td>
+      </tr>
+    <%- end %>
+  </tbody>
+  
+</table>
+<%# paginate (@collection || collection) %>

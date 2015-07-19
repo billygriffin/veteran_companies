@@ -1,0 +1,9 @@
+<ul id='flash_message' class='flash-message'>
+<%- if flash %>
+  <%- flash.each do |kind, message| %>
+    <li class="notification fade in <%= kind %>" data-bindable='auto-dismiss'>
+      <p><%= message %></p>
+    </li>
+  <%- end %>
+<%- end %>
+</ul>

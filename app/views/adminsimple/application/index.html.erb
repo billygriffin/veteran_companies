@@ -1,0 +1,5 @@
+<%= page_header title: "#{collection_title}" do %>
+  <%=  link_to "New #{resource_title}", new_resource_path, class: "btn btn-primary icon-#{resource_icon}"%>
+<% end %>
+
+<%= render partial: 'list' %>

@@ -3,6 +3,22 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+
+  #Admin Routes
+  mount Adminsimple::Engine => '/admin'
+  scope '/admin' do
+    devise_for :admins, path: '',
+      skip: [:registrations, :confirmations],
+      controllers: {sessions: 'adminsimple/devise/sessions', passwords: 'adminsimple/devise/passwords'}
+    devise_scope :admin do
+      resource :registration, only: [:edit, :update], path: 'profile', controller: 'adminsimple/devise/registrations', as: :admin_registration
+    end
+  end
+
+  namespace :admin do
+    resources :companies
+  end
+
   root 'home#show'
 
   resources :companies

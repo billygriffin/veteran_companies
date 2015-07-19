@@ -1,0 +1,22 @@
+
+<div class="adminsimple-widget-box form-container">
+  <div class="widget-title">
+    <span class="icon"><i class="icon-align-justify"></i></span>
+  </div>
+  <div class="widget-content">
+    <%= simple_form_for [:admin, resource], html: {class: 'form-horizontal'} do |f| %>
+      <div class='form-inputs'>
+        <%= f.input :name %>
+        <%= f.input :url, label: 'Website' %>
+        <%= f.input :employees_count, label: '# of Employees' %>
+        <%= f.input :total_funding, hint: 'Number in thousands of dollars' %>
+        <%= f.input :stage %>
+        <%= f.input :year_founded, as: :date, html5: true %>
+        <%= f.input :qualification %>
+      </div>
+      <div class='form-actions'>
+        <%= f.button :submit, 'Save' %>
+      </div>
+    <%- end %>
+  </div>
+</div>
