@@ -16,7 +16,12 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :companies
+    resources :companies do
+      member do
+        put :publish
+        put :take_offline
+      end
+    end
   end
 
   root 'home#show'

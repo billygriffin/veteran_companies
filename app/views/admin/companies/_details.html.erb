@@ -4,4 +4,23 @@
 
   <dt>Website</dt>
   <dd><%= resource.url %></dd>
+
+  <dt>Employees</dt>
+  <dd><%= resource.employees_count %></dd>
+
+  <dt>Total Funding (in thousands)</dt>
+  <dd><%= resource.total_funding %></dd>
+
+  <dt>Stage</dt>
+  <dd><%= resource.stage %></dd>
+
+  <dt>Year Founded</dt>
+  <dd><%= resource.year_founded.strftime("%Y") %></dd>
+
+  <dt>Qualification</dt>
+  <dd><%= resource.qualification %></dd>
+
+  <%= button_to 'Publish', publish_admin_company_path(resource), class: 'btn btn-success', method: :put  unless resource.published? %>
+  <%= button_to 'Take Offline', take_offline_admin_company_path(resource), class: 'btn btn-success', method: :put  unless resource.pending? %>
+
 </dl>

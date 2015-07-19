@@ -13,8 +13,8 @@ Company.create(
   total_funding: 0,
   stage: "Pre Series A",
   year_founded: 4.years.ago,
-  qualification: "2 of 2 vet cofounders",
-  status: "active")
+  qualification: "2 of 2 vet cofounders"
+)
 
 Company.create(
   name: "Uvize",
@@ -23,8 +23,7 @@ Company.create(
   total_funding: 500,
   stage: "Pre Series A",
   year_founded: 2.years.ago,
-  qualification: "2 of 4 vet cofounders",
-  status: "active"
+  qualification: "2 of 4 vet cofounders"
 )
 
 Admin.create(

@@ -1,5 +1,5 @@
 <h1>Dis is da veteran-led companies yo</h1>
 
-<% @companies.each do |company| %>
+<% @companies.published.each do |company| %>
   <p>Name: <%= link_to company.name, company_path(company) %><br>
 <% end %>
