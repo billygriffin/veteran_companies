@@ -23,7 +23,7 @@ Adminsimple.setup do |config|
   Navigasmic.setup do |c|
     c.semantic_navigation :adminsimple_main_nav do |n|
       n.item n.t('adminsimple.main_nav.dashboard'), proc{ adminsimple.root_path }, icon: 'home'
-      n.item n.t('adminsimple.main_nav.companies'), proc{ admin_companies_path }, icon: 'folder', highlights_on: [{controller: 'admin/companies'}]
+      n.item n.t('adminsimple.main_nav.companies'), proc{ admin_companies_path }, icon: 'folder', highlights_on: [{controller: 'admin/companies'}], label: proc { Company.pending.count }
       n.item n.t('adminsimple.main_nav.founders'), proc{ admin_founders_path }, icon: 'folder', highlights_on: [{controller: 'admin/founders'}]
       n.item n.t('adminsimple.main_nav.organizations'), proc{ admin_organizations_path }, icon: 'folder', highlights_on: [{controller: 'admin/organizations'}]
       # n.item n.t('adminsimple.main_nav.base_locations'), proc{ admin_base_locations_path }, icon: 'folder', highlights_on: [{controller: 'admin/base_locations'}]

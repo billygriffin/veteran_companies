@@ -1,7 +1,7 @@
 class Admin::CompaniesController < Admin::ParentController
   defaults resource_class: Company
 
-  has_scope :status, default: 'pending', only: [:index] do |controller, scope, value|
+  has_scope :status, default: 'published', only: [:index] do |controller, scope, value|
     value == "published" ? scope.published : scope.pending
   end
   
