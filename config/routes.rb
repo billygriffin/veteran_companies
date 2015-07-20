@@ -22,11 +22,14 @@ Rails.application.routes.draw do
         put :take_offline
       end
     end
+    resources :founders
+    resources :organizations
   end
 
   root 'home#show'
 
   resources :companies
+  resources :founders
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

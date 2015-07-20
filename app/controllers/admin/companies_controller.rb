@@ -6,7 +6,16 @@ class Admin::CompaniesController < Admin::ParentController
   end
   
   def permitted_params
-    params.permit(company: [ :name, :url, :employees_count, :total_funding, :stage, :year_founded, :qualification ])
+    params.permit(company: [ :name, 
+                             :url, 
+                             :employees_count, 
+                             :total_funding, 
+                             :stage, 
+                             :year_founded, 
+                             :qualification, 
+                             {:founder_ids => [] }, 
+                             {:organization_ids => [] }
+                           ])
   end
 
   def resource_title

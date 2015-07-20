@@ -1,14 +1,9 @@
-<div class="btn-group chosen-form">
-  <div class="admin-toggle-button"><%= link_to("Pending Companies", admin_companies_path(status: "pending"), class: 'btn btn-default') %></div>
-  <div class="admin-toggle-button"><%= link_to("Live Companies", admin_companies_path(status: "published"), class: 'btn btn-default') %></div>
-</div>
-
 <table class='table table-striped'>
   <thead>
     <tr>
       <th class='controls'></th>
       <th class='hidden-xs hidden-sm hidden-md' width='10px'>ID</th>
-      <th>Company</th>
+      <th>Founder</th>
     </tr>
   </thead>
   <tbody>
@@ -16,7 +11,7 @@
       <tr>
         <td class='controls'><%= link_to '', edit_resource_path(resource), class: 'btn btn-default icon-edit' %></td>
         <td class="" ass='hidden-xs hidden-sm hidden-md'><%= resource.id %></td>
-        <td><%= link_to resource.name, admin_company_path(resource) %></td>
+        <td><%= link_to resource.name, admin_founder_path(resource) %></td>
       </tr>
     <%- end %>
   </tbody>

@@ -24,7 +24,8 @@ Adminsimple.setup do |config|
     c.semantic_navigation :adminsimple_main_nav do |n|
       n.item n.t('adminsimple.main_nav.dashboard'), proc{ adminsimple.root_path }, icon: 'home'
       n.item n.t('adminsimple.main_nav.companies'), proc{ admin_companies_path }, icon: 'folder', highlights_on: [{controller: 'admin/companies'}]
-      # n.item n.t('adminsimple.main_nav.bases'), proc{ admin_bases_path }, icon: 'folder', highlights_on: [{controller: 'admin/bases'}]
+      n.item n.t('adminsimple.main_nav.founders'), proc{ admin_founders_path }, icon: 'folder', highlights_on: [{controller: 'admin/founders'}]
+      n.item n.t('adminsimple.main_nav.organizations'), proc{ admin_organizations_path }, icon: 'folder', highlights_on: [{controller: 'admin/organizations'}]
       # n.item n.t('adminsimple.main_nav.base_locations'), proc{ admin_base_locations_path }, icon: 'folder', highlights_on: [{controller: 'admin/base_locations'}]
       # n.item n.t('adminsimple.main_nav.establishments'), proc{ admin_establishments_path }, icon: 'folder', highlights_on: [{controller: 'admin/establishments'}]
       # n.item n.t('adminsimple.main_nav.reviews'), proc{ admin_reviews_path }, icon: 'folder', highlights_on: [{controller: 'admin/reviews'}], label: proc { Review.pending.count }
