@@ -1,18 +1,20 @@
-<h1>Veteran-led Companies</h1>
+<div class='container'>
+  <h1>Veteran-led Companies</h1>
 
-<table class='table table-striped'>
-  <thead>
-    <tr>
-      <th>Company</th>
-      <th>Organization(s)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <%- @companies.published.each do |company| %>
+  <table class='table table-striped'>
+    <thead>
       <tr>
-        <td><%= link_to company.name, company_path(company) %></td>
-        <td><%= company.organizations.map(&:name).to_sentence %></td>
+        <th>Company</th>
+        <th>Organization(s)</th>
       </tr>
-    <%- end %>
-  </tbody> 
-</table>
+    </thead>
+    <tbody>
+      <%- @companies.published.each do |company| %>
+        <tr>
+          <td><%= link_to company.name, company_path(company) %></td>
+          <td><%= company.organizations.map(&:name).to_sentence %></td>
+        </tr>
+      <%- end %>
+    </tbody> 
+  </table>
+</div>
