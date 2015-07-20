@@ -1,0 +1,21 @@
+.new-company-form {
+  input {
+    width: 50%;
+
+    @include respond-below($media-768) {
+      width: 80%;
+    }
+
+    @include respond-below($media-580) {
+      width: 100%;
+    }
+  }
+
+  .btn {
+    margin: 10px 0;
+  }
+
+  label {
+    margin-top: 6px;
+  }
+}
