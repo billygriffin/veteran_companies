@@ -40,6 +40,7 @@ gem 'adminsimple', github: 'modeset/adminsimple', branch: 'rails4'
 gem 'will_paginate-bootstrap'
 gem 'haml-rails'
 gem 'devise'
+gem 'chosen-rails'
 
 gem 'rails_12factor', group: :production
 
