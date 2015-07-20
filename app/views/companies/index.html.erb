@@ -10,7 +10,7 @@
   <tbody>
     <%- @companies.published.each do |company| %>
       <tr>
-        <td><%= link_to company.name, admin_company_path(company) %></td>
+        <td><%= link_to company.name, company_path(company) %></td>
         <td><%= company.organizations.map(&:name).to_sentence %></td>
       </tr>
     <%- end %>
