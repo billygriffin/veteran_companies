@@ -1,5 +1,18 @@
-<h1>Dis is da veteran-led companies yo</h1>
+<h1>Veteran-led Companies</h1>
 
-<% @companies.published.each do |company| %>
-  <p>Name: <%= link_to company.name, company_path(company) %><br>
-<% end %>
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Organization(s)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%- @companies.published.each do |company| %>
+      <tr>
+        <td><%= link_to company.name, admin_company_path(company) %></td>
+        <td><%= company.organizations.map(&:name).to_sentence %></td>
+      </tr>
+    <%- end %>
+  </tbody> 
+</table>
