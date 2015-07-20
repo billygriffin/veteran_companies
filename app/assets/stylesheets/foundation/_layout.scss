@@ -42,6 +42,10 @@ body {
   margin:0 auto;
   clear: both;
 
+  h1 {
+    margin: 10px 0;
+  }
+
   @include respond-below($media-768) {
     width: 100%;
     min-width: 100%;
