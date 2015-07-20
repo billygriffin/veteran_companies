@@ -11,17 +11,17 @@
     padding: 0;
 
     @include respond-below($media-768) {
-      padding: 0px 10px;
+      padding: 0px 20px;
     }
   }
 
   .logo{
     float:left;
-    width:293px;
+    width:100px;
     height:38px;
     font-size: 20px;
     font-weight: bold;
-    margin: 16px 0 0 0;
+    margin: 24px 0 0 0;
 
     // a{
     //   height: 100%;
@@ -140,8 +140,6 @@
     }
 
     nav .btn {
-      padding: 8px 0;
-      width: 75px;
       white-space: nowrap;
     }
   }
