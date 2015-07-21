@@ -15,7 +15,7 @@ class CompaniesController < ApplicationController
   def create
     @company = Company.new(company_params)
     if @company.save
-      redirect_to @company
+      # redirect_to new_leader_path(@company)
     else
       render "new"
     end

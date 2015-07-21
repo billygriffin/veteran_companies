@@ -27,7 +27,7 @@ Company.create(
 )
 
 Admin.create(
-  email: 'admin@vetco.com',
+  email: 'admin@veteranslist.com',
   password: 'password',
   password_confirmation: 'password'
 )

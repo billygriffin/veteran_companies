@@ -13,7 +13,7 @@ class Admin::CompaniesController < Admin::ParentController
                              :stage, 
                              :year_founded, 
                              :qualification, 
-                             {:founder_ids => [] }, 
+                             {:leader_ids => [] }, 
                              {:organization_ids => [] }
                            ])
   end
