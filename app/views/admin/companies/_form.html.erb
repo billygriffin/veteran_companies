@@ -12,7 +12,11 @@
         <%= f.input :employees_count, label: '# of Employees' %>
         <%= f.input :total_funding, hint: 'Number in thousands of dollars' %>
         <%= f.input :stage %>
-        <%= f.input :year_founded, as: :date, html5: true %>
+        <%= f.input :year_founded, start_year: Date.today.year - 15,
+                                   end_year: Date.today.year,
+                                   discard_hour: true, 
+                                   discard_day: true, 
+                                   discard_month: true %>
         <%= f.input :total_founders %>
         <%= f.input :veteran_founders %>
         <%= f.input :veteran_executives %>
