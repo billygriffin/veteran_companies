@@ -1,0 +1,12 @@
+<div class="container new-company-form">
+  <%= simple_form_for(@leader) do |f| %>
+    <%= f.error_notification %>
+
+    <%= f.input :name %>
+    <%= f.input :url, label: 'LinkedIn URL' %>
+    <%= f.hidden_field :company_id, value: @company.id  %>
+
+    <%= f.button :submit %>
+
+  <% end %>
+</div>
