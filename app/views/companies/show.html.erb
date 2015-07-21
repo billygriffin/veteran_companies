@@ -4,6 +4,8 @@ Employees: <%= @company.employees_count %><br>
 Total Funding: <%= @company.total_funding == 0 ? "Bootstrap yo" : "#{@company.total_funding}k" %><br>
 Stage: <%= @company.stage %><br>
 Year Founded: <%= @company.year_founded.strftime("%Y") %><br>
-Qualification: <%= @company.qualification %><br>
+Total Founders: <%= @company.total_founders %><br>
+Veteran Founders: <%= @company.veteran_founders %><br>
+Veteran Executives: <%= @company.veteran_executives %><br>
 
 <h4><%= link_to "Back to companies list", companies_path %></h4>

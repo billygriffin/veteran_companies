@@ -23,8 +23,14 @@
   <dt>Year Founded</dt>
   <dd><%= resource.year_founded.strftime("%Y") %></dd>
 
-  <dt>Qualification</dt>
-  <dd><%= resource.qualification %></dd>
+  <dt>Total Founders</dt>
+  <dd><%= resource.total_founders %></dd>
+
+  <dt>Veteran Founders</dt>
+  <dd><%= resource.veteran_founders %></dd>
+
+  <dt>Veteran Executives</dt>
+  <dd><%= resource.veteran_executives %></dd>
 
   <%= button_to 'Publish', publish_admin_company_path(resource), class: 'btn btn-success', method: :put  unless resource.published? %>
   <%= button_to 'Take Offline', take_offline_admin_company_path(resource), class: 'btn btn-success', method: :put  unless resource.pending? %>

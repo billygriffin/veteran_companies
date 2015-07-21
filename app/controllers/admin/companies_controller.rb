@@ -12,7 +12,9 @@ class Admin::CompaniesController < Admin::ParentController
                              :total_funding, 
                              :stage, 
                              :year_founded, 
-                             :qualification, 
+                             :total_founders,
+                             :veteran_founders,
+                             :veteran_executives,
                              {:leader_ids => [] }, 
                              {:organization_ids => [] }
                            ])

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150721035445) do
+ActiveRecord::Schema.define(version: 20150721041055) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,16 +47,18 @@ ActiveRecord::Schema.define(version: 20150721035445) do
   add_index "affiliations", ["organization_id"], name: "index_affiliations_on_organization_id", using: :btree
 
   create_table "companies", force: :cascade do |t|
-    t.string   "name",                                null: false
+    t.string   "name",                                   null: false
     t.string   "url"
     t.integer  "employees_count"
     t.integer  "total_funding"
     t.string   "stage"
     t.datetime "year_founded"
-    t.string   "qualification"
-    t.string   "status",          default: "pending"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.string   "status",             default: "pending"
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.integer  "total_founders"
+    t.integer  "veteran_founders"
+    t.boolean  "veteran_executives"
   end
 
   create_table "leaders", force: :cascade do |t|
