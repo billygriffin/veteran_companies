@@ -1,12 +1,14 @@
-<div class="container new-company-form">
+<div class="container leaders-form">
   <%= simple_form_for(@leader) do |f| %>
     <%= f.error_notification %>
-
-    <%= f.input :name %>
-    <%= f.input :url, label: 'LinkedIn URL' %>
     <%= f.hidden_field :company_id, value: @company.id  %>
 
-    <%= f.button :submit %>
+    <div class="leader-form-inputs">
+      <%= f.input :name, input_html: {name: 'name[]'} %>
+      <%= f.input :url, input_html: {name: 'url[]'}, label: 'LinkedIn URL' %>
+    </div>
+    <div class="btn add-new-leader-button">Add Row</div>
 
+    <%= f.button :submit %>
   <% end %>
 </div>
