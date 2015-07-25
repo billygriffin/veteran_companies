@@ -1,11 +1,16 @@
-<h2><%= @company.name %></h2>
-Website: <%= link_to @company.name, @company.url %><br>
-Employees: <%= @company.employees_count %><br>
-Total Funding: <%= @company.total_funding == 0 ? "Bootstrap yo" : "#{@company.total_funding}k" %><br>
-Stage: <%= @company.stage %><br>
-Year Founded: <%= @company.year_founded.strftime("%Y") %><br>
-Total Founders: <%= @company.total_founders %><br>
-Veteran Founders: <%= @company.veteran_founders %><br>
-Veteran Executives: <%= @company.veteran_executives %><br>
+<div class='container'>
+  <h2 class='company-header'><%= @company.name %></h2>
 
-<h4><%= link_to "Back to companies list", companies_path %></h4>
+  <dl class='company-details'>
+    <dt>Website: <%= link_to @company.name, @company.url %><dt>
+    <dt>Employees: <%= @company.employees_count %></dt>
+    <dt>Total Funding: <%= @company.total_funding == 0 ? "Bootstrapped" : "#{@company.total_funding}k" %></dt>
+    <dt>Stage: <%= @company.stage %></dt>
+    <dt>Year Founded: <%= @company.year_founded.strftime("%Y") %></dt>
+    <dt>Total Founders: <%= @company.total_founders %></dt>
+    <dt>Veteran Founders: <%= @company.veteran_founders %></dt>
+    <dt>Veteran Executives: <%= @company.veteran_executives %></dt>
+  </dl>
+
+  <h4><%= link_to "Back to companies list", companies_path %></h4>
+</div>
