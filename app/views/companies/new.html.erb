@@ -1,30 +1,48 @@
-<div class="container new-company-form">
-  <%= simple_form_for(@company) do |f| %>
-    <%= f.error_notification %>
+<div class='container'>
+  <div class='new-company-form'>
+    <h1>Add Company Data</h1>
 
-    <%= f.input :name %>
-    <%= f.input :url, label: 'Website' %>
-    <%= f.input :employees_count, label: '# of Employees' %>
-    <%= f.input :total_funding, hint: 'Number in thousands of dollars' %>
-    <%= f.input :stage %>
-    <%= f.input :year_founded, start_year: Date.today.year - 15,
-                               end_year: Date.today.year,
-                               discard_hour: true, 
-                               discard_day: true, 
-                               discard_month: true %>
-    <%= f.input :total_founders %>
-    <%= f.input :veteran_founders %>
-    <%= f.input :veteran_executives %>
+    <%= simple_form_for(@company) do |f| %>
+      <%= f.error_notification %>
 
-    <%= f.button :submit %>
+      <%= f.input :name %>
+      <%= f.input :url, label: 'Website' %>
+      <%= f.input :employees_count, label: '# of Employees' %>
+      <%= f.input :total_funding, hint: 'Number in thousands of dollars' %>
+      <%= f.input :stage %>
+      <%= f.input :year_founded, start_year: Date.today.year - 15,
+                                 end_year: Date.today.year,
+                                 discard_hour: true, 
+                                 discard_day: true, 
+                                 discard_month: true %>
+      <%= f.input :total_founders %>
+      <%= f.input :veteran_founders %>
+      <%= f.input :veteran_executives %>
 
-  <% end %>
+      <%= f.button :submit %>
+
+    <% end %>
+  </div>
   
   <h4>OR</h4>
 
-  <p>Email this link to someone else</p>
+  <div class='email-form'>
+    <h1>Email this link to someone</h1>
 
-  <input id="email-link"></input>
-  <button>Send</button>
+    <form class='email-form-inputs'>
+      <label>Ask this person</label>
+      <input type="text" name="name" placeholder="Name">
+      <label>Email</label>
+      <input type="text" name="name" placeholder="veteran.leader@veterancompany.com">
+      <label>To provide information on this veteran-led company</label>
+      <input type="text" name="company-name" placeholder="Company Name">
+      <label>Your Name</label>
+      <input type="text" name="your-name" placeholder="Name">
+      <label>Your Email</label>
+      <input type="text" name="your-email" placeholder="veteran.supporter@example.com">
+      
+      <input type="submit" value="Submit">
+    </form>
+  </div>
 
 </div>
