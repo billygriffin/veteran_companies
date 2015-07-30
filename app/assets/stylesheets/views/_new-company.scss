@@ -1,21 +1,17 @@
-.new-company-form {
-  input {
-    width: 50%;
-
-    @include respond-below($media-768) {
-      width: 80%;
-    }
-
-    @include respond-below($media-580) {
-      width: 100%;
-    }
-  }
-
-  .btn {
-    margin: 10px 0;
-  }
-
-  label {
-    margin-top: 6px;
-  }
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:focus {
+  background-color:#EEEEEE;
+  color: black;
 }
+
+.nav-tabs > li > a:hover {
+  background-color: #727272;
+}
+
+.nav-tabs > li > a {
+  color: black;
+  margin-bottom: 10%;
+  background-color: #727272;
+}
+
+

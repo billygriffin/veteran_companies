@@ -28,11 +28,11 @@ font-size:18pt !important;
 margin-bottom:30px;*/
 }
 a:focus{
-	    outline: medium none;
+	outline: medium none;
 }
 .navbackground{
- background-color: #8a8a8a;
- color: #000;
+  background-color: #8a8a8a;
+  color: #000;
 }
 #myTab > li {
     width: 50%;
@@ -43,6 +43,8 @@ a:focus{
     margin-right: 0;
     padding: 11px 0;
     text-align: center;
+    outline: 0;
+    border: 0;
 }
 .my_div_form {
     display: inline-block;
@@ -639,11 +641,9 @@ border:2px solid #AAAAAA ;background-color:#FFFFFF;
 		margin-bottom:0;
 	}
 	.nav-tabs > li > a{
-		background-color:#0288D1 !important;
+		background-color:#0288D1;
 	}
-	.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus{
-		background-color: transparent !important;
-	}
+
 	.padding_tab {
     padding: 0 ;
 }
@@ -735,31 +735,14 @@ border:2px solid #AAAAAA ;background-color:#FFFFFF;
 	font-weight:normal;
 	}
 
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus{
-   /* background-color:#727272;*/
-   background-color:#EEEEEE;
-    color: black;
-
-
-}
-.nav-tabs > li > a:hover{
-	  background-color: #727272;
-}
-.nav>li>a {
-   
-    padding: 10px 90px;
-}
-
-.nav-tabs>li>a{
-    color: black;
-    /* margin-bottom: 10%; */
-    margin-top: 0%;
-     margin-bottom: 10%;
-	 background-color: #727272;
-}
 div >a :hover{
     color: white;
 }
+
+.nav > li > a { 
+  padding: 10px 90px;
+}
+
 .white_text{
     color: white;
 }
