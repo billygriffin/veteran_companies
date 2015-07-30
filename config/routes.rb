@@ -31,6 +31,8 @@ Rails.application.routes.draw do
   resources :companies
   resources :leaders
 
+  get '/mission' => 'mission#show'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
