@@ -1,20 +1,28 @@
+<nav class="main-nav">
+  <a href="/mission" class="main-nav-btn">Mission</a>
+  <a href="/companies" class="main-nav-btn main-nav-btn-active">List</a>
+  <a href="/research" class="main-nav-btn">Research</a>
+</nav>
+
 <div class='container'>
   <h1>Veteran-led Companies</h1>
 
-  <table class='table table-striped'>
+  <table class="table-striped">
     <thead>
       <tr>
-        <th>Company</th>
-        <th>Organization(s)</th>
+        <th><div class="listheading">Company Name</div></th>
+        <th><div class="listheading">Organization Affiliation</div>  </th>
       </tr>
     </thead>
     <tbody>
       <%- @companies.published.each do |company| %>
         <tr>
-          <td><%= link_to company.name, company_path(company) %></td>
-          <td><%= company.organizations.map(&:name).to_sentence %></td>
+          <td><div class="listsubheading"><%= link_to company.name, company_path(company) %></div></td>
+          <td><div class="listsubheadingopp"><%= company.organizations.map(&:name).to_sentence %></div></td>
         </tr>
       <%- end %>
-    </tbody> 
+    </tbody>
   </table>
 </div>
+
+

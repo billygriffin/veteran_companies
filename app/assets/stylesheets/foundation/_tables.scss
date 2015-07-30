@@ -1,0 +1,53 @@
+.listheading{
+  font-family: 'AvenirNext-Regular', Helvetica, sans-serif;
+  color: #2C2C2C;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.listsubheading{
+  font-family: 'AvenirNext-Regular', Helvetica, sans-serif;
+  color: #009BDA;
+  font-size: 14px;
+  font-weight: normal;
+
+  &.company-attribute {
+    color:#2C2C2C;
+  }
+}
+
+.listsubheadingopp{
+  font-family: 'AvenirNext-Regular', Helvetica, sans-serif;
+  color: #858585;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%
+}
+
+table th,
+table td {
+  width: 50%;
+  text-align: left;
+  padding: 14px;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #ffffff;
+}
+
+.return-link {
+  margin-top: 14px;
+  padding-left: 14px;
+  display: inline-block;
+}

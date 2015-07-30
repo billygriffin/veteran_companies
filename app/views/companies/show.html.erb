@@ -1,16 +1,59 @@
+<nav class="main-nav">
+  <a href="/mission" class="main-nav-btn">Mission</a>
+  <a href="/companies" class="main-nav-btn main-nav-btn-active">List</a>
+  <a href="/research" class="main-nav-btn">Research</a>
+  <div>
+    <a href="/companies" class="returntolist"><i class="fa fa-arrow-left"></i> <u>Return to List</u></a>
+  </div>
+</nav>
 <div class='container'>
-  <h2 class='company-header'><%= @company.name %></h2>
+  <h1 class='company-header'><%= @company.name %></h2>
 
-  <dl class='company-details'>
-    <dt>Website: <%= link_to @company.name, @company.url %><dt>
-    <dt>Employees: <%= @company.employees_count %></dt>
-    <dt>Total Funding: <%= @company.total_funding == 0 ? "Bootstrapped" : "#{@company.total_funding}k" %></dt>
-    <dt>Stage: <%= @company.stage %></dt>
-    <dt>Year Founded: <%= @company.year_founded.strftime("%Y") %></dt>
-    <dt>Total Founders: <%= @company.total_founders %></dt>
-    <dt>Veteran Founders: <%= @company.veteran_founders %></dt>
-    <dt>Veteran Executives: <%= @company.veteran_executives %></dt>
-  </dl>
+  <table class="table-striped">
 
-  <h4><%= link_to "Back to companies list", companies_path %></h4>
+    <tbody>
+      <tr>
+        <td><div class="listsubheading company-attribute"> Website:</div></td>
+        <td><div class="listsubheadingopp"><%= link_to @company.name, @company.url %></div></td>
+      </tr>
+      <tr>
+        <td><div class="listsubheading company-attribute"> Employees:</div></td>
+        <td><div class="listsubheadingopp"><%= @company.employees_count %></div></td>
+      </tr>
+      <tr>
+        <td><div class="listsubheading company-attribute">Total Funding:</div></td>
+        <td><div class="listsubheadingopp" ><%= @company.total_funding == 0 ? "Bootstrapped" : "#{@company.total_funding}k" %></div></td>
+      </tr>
+      <tr>
+        <td><div class="listsubheading company-attribute">Stage:</div></td>
+        <td><div class="listsubheadingopp"><%= @company.stage %></div></td>
+      </tr>
+      <tr>
+        <td><div class="listsubheading company-attribute">Year Founded:</div></td>
+        <td><div class="listsubheadingopp"><%= @company.year_founded.strftime("%Y") %></div></td>
+      </tr>
+      <tr>
+        <td><div class="listsubheading company-attribute">Organization Affiliation</div></td>
+        <td><div class="listsubheadingopp"><%= @company.organizations.map(&:name).to_sentence %></div></td>
+      </tr>
+      <tr>
+        <td><div class="listsubheading company-attribute">Total Founders:</div></td>
+        <td><div class="listsubheadingopp"><%= @company.total_founders %></div></td>
+      </tr>
+      <tr>
+        <td><div class="listsubheading company-attribute">Veteran Founders:</div></td>
+        <td><div class="listsubheadingopp"><%= @company.veteran_founders %></div></td>
+      </tr>
+      <tr>
+        <td><div class="listsubheading company-attribute">Veteran Executives:</div></td>
+        <td><div class="listsubheadingopp"><%= @company.veteran_executives %></div></td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <a class='return-link' href='<%= companies_url %>'>
+    <i class='fa fa-arrow-left'> Return to Companies List</i>
+  </a>
+
 </div>
