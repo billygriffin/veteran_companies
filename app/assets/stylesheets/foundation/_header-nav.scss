@@ -1,0 +1,55 @@
+
+.navbar.navbar-inverse {
+  border-radius: 0;
+}
+
+.header-nav-text {
+  font-size: 18px;
+  font-family: Gill Sans Bold;
+  color: #00B8F7;
+}
+
+.header-nav-logo-text {
+  line-height: 50px;
+}
+
+.header-nav-text:hover {
+  color: #22B8F7;
+}
+
+.top-div {
+  font-size: 9px;
+}
+.top_div_padding {
+  color: #03A9F4 ;
+  padding: 7px 0 0;   
+}
+
+// 
+.vl-logo-lg {
+  display: inline-block;
+  background: image-url("logo.png");
+  background-size: 50px 31px;
+  width: 50px;
+  height: 31px;
+  margin: -6px 0 0 -10px;
+}
+
+.vl-logo {
+  display: inline-block;
+  background: image-url("icon_vl.png");
+  background-size: 50px 31px;
+  width: 50px;
+  height: 31px;
+  margin: -6px 0 0 -10px;
+}
+
+.headercenter {
+  font-family: Helvetica bold;
+}
+
+.headingfont_mission {
+  font-family: Goudy Old Style T Bold;
+  color: #2C2C2C;
+  font-size: 22px;
+}

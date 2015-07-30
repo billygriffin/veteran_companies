@@ -1,23 +1,33 @@
 
 //Library code and config
 @import 'lib/media-response';
+@import 'lib/font-awesome.min';
 
 //Libraries
 @import 'compass';
 @import 'foundation/config';
-@import 'reset';
+// @import 'reset';
 @import 'shadowbox';
 
+//Base
+@import 'base/bootstrap';
+@import 'base/bootstrap-theme';
+@import 'base/style';
+
 //Foundational
+@import 'foundation/fonts';
 @import 'foundation/containers';
+@import 'foundation/layout';
 @import 'foundation/forms';
 @import 'foundation/buttons';
-@import 'foundation/header';
-@import 'foundation/layout';
+@import 'foundation/buttons-janky';
+@import 'foundation/header-nav';
+@import 'foundation/tables';
+@import 'foundation/main-nav';
 
 //Views
 @import 'views/home';
 @import 'views/new-company';
-@import 'views/companies';
+//@import 'views/companies';
 
 

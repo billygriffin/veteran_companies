@@ -1,8 +1,32 @@
-<div id="header">
-  <div class="container">
-    <div class="logo"><a href="/">Veterans List</a></div>
-    <nav>
-      <%= link_to 'Add Company', new_company_path, class: 'btn' %>
-    </nav>
+<nav class="navbar navbar-inverse ">
+  <div>
+    <div class="col-md-4 col-xs-4"> 
+      <a class="navbar-brand hidden-xs" href="/"><span aria-hidden="true" class="vl-logo-lg"></span></a> 
+      <a class="header-nav-text header-nav-logo-text hidden-xs" href="/">VETERANS LIST</a> 
+      <a class="navbar-brand hidden-sm hidden-md hidden-lg" href="/"><span aria-hidden="true" class="vl-logo"></span></a> 
+    </div>
+      
+    <div class="col-md-4 col-xs-4 top_div_padding text-center" style="margin-top:1px;">
+      <%= link_to 'Add Company', new_company_path, class: 'btn top-btn-color' %>
+    </div>
+      
+    <div class="col-md-4 hidden-xs text-right">
+      <div class="top-div"><a href="http://www.patriotbootcamp.org" title="">A project from</a></div>
+      <a href="http://www.patriotbootcamp.org" title="" class="header-nav-text">PATRIOT BOOT CAMP</a>
+    </div>
+      
+    <div class="navbar-header">
+      <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">  </button>
+    </div>
+      
+    <div class="navbar-collapse collapse" id="navbar" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/mission">MISSION</a></li>
+        <li><a href="/companies">LIST</a></li>
+        <li><a href="/research">RESEARCH</a></li>
+      </ul>
+    </div>
+   
   </div>
-</div>
+</nav>

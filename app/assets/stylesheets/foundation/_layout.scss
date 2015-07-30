@@ -43,7 +43,7 @@ body {
   clear: both;
 
   h1 {
-    margin: 10px 0;
+    margin: 24px 14px 6px;
   }
 
   @include respond-below($media-768) {

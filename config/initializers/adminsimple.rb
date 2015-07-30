@@ -58,7 +58,7 @@ Adminsimple.setup do |config|
 
   SimpleForm.setup do |c|
     c.boolean_style = :inline
-    c.button_class = 'btn btn-primary'
+    # c.button_class = 'btn btn-primary'
 
     c.wrappers :bootstrap3, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
 

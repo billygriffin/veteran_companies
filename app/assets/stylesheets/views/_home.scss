@@ -1,7 +1,7 @@
 #welcome-area {
   position: absolute;
   width: 100%;
-  top: 72px;
+  top: 52px;
   bottom: 0px;
 
   @include respond-below($media-580) {
@@ -11,7 +11,7 @@
   #home-cover-area {
 
     #welcome-background {
-      background: image-url("_test_home_pel_photo.jpg");
+      background: image-url("flags.jpg");
       // override for mobile class and/or mobile app class
       height: 100%;
       width: 100%;
