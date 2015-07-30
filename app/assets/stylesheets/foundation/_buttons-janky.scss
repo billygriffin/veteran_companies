@@ -1,10 +1,8 @@
-.top_btn_color{
-   background-color: #0288D1;
-    color: #fff;
-    font-size: 14px;
-    margin-bottom:10px;
+.top-btn-color {
+  background-color: #0288D1;
+  color: #fff;
+  margin-bottom:10px;
   font-family: Helvetica bold !important;
-  
 }
 
 .top_btn_color1{
@@ -21,7 +19,7 @@
   font-size:14pt !important;
 }
 
- .mobilebtn
+.mobilebtn
   {
  font-family: Helvetica !important;
 color:#FFF;
@@ -37,8 +35,6 @@ font:blod !important;
   .top_btn_color1{
     font-size:13px;
   }
-
-
 
 
 .button-blue {
@@ -65,3 +61,8 @@ font:blod !important;
   border: 1px solid transparent;
   border-radius: 4px;
 }
+
+a { color: #1F88A9; text-decoration: none;}
+a:hover { color: #0e7292; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }

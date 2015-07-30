@@ -2,12 +2,12 @@
   <a href="/mission" class="main-nav-btn">Mission</a>
   <a href="/companies" class="main-nav-btn main-nav-btn-active">List</a>
   <a href="/research" class="main-nav-btn">Research</a>
-  <div>
-    <a href="/companies" class="returntolist"><i class="fa fa-arrow-left"></i> <u>Return to List</u></a>
-  </div>
+  <%- if @company.present? %>
+    <div><a href="/companies" class="returntolist"><i class="fa fa-arrow-left"></i> <u>Return to List</u></a></div>
+  <%- end %>
 </nav>
 <div class='container'>
-  <h1 class='company-header'><%= @company.name %></h2>
+  <h1 class='company-header sublistheading'><%= @company.name %></h2>
 
   <table class="table-striped">
 
