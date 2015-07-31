@@ -2,6 +2,13 @@
 .navbar.navbar-inverse {
   border-radius: 0;
 }
+.navbar {
+  z-index: 9;
+}
+
+#welcome-area .main-nav {
+  margin-top: 20px;
+}
 
 .header-nav-text {
   font-size: 18px;

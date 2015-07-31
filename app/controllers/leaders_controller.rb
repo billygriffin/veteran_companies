@@ -20,7 +20,7 @@ class LeadersController < ApplicationController
     end
 
     if valid
-      redirect_to root_path
+      redirect_to root_path, notice: "Thanks for submitted veteran leaders for #{@company.name}!"
     else
       render "new"
     end

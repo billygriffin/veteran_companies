@@ -26,7 +26,7 @@
       left: 50%;
       top: 20%;
       width: 520px;
-      margin-left: -240px;
+      margin-left: -260px;
       text-align: center;
       @include respond-below($media-480) {
         width: 304px;
@@ -39,6 +39,10 @@
         &:first-of-type {
           margin-right: 10px;
         }
+      }
+
+      .home-submit-company-button {
+        border: 2px solid white;
       }
     }
 

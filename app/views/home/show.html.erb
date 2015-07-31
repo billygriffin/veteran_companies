@@ -5,9 +5,10 @@
       <%= render partial: 'layouts/main_nav' %>
 
       <div id="welcome-content">
+        <%= render partial: "shared/flash_messages", flash: flash %> 
         <h1 class="welcome-tagline">Connection Builds Community</h1>
         <h2 class="welcome-subtagline">Identifying Veteran-led Startups is the first step to connecting them</h2>
-        <%= link_to "Submit a Company", new_company_path, class: 'btn button-blue new-company-button' %>
+        <%= link_to "Submit a Company", new_company_path, class: 'btn button-blue home-submit-company-button new-company-button' %>
       </div>
     </div>
   </div>

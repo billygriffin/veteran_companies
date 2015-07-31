@@ -12,18 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+// require turbolinks
 //= require_tree ./app
 //= require lib/bootstrap.min
 
-
-
-
-
-$(document).ready(function(){ 
-    $("#myTab a").click(function(e){
-      e.preventDefault();
-      $(this).tab('show');
-  
-    });
-});

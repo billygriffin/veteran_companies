@@ -15,6 +15,8 @@ class CompaniesController < ApplicationController
   def create
     @company = Company.new(company_params)
     if @company.save
+      flash[:notice] = "We are reviewing your submission. Thank you for contributing to Veterans List! 
+                        To enable us to verify the Veteran-Led company, please identify the Veteran Leader(s)."
       redirect_to new_leader_path(company_id: @company.id)
     else
       render "new"

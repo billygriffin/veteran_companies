@@ -1,12 +1,9 @@
 <div class="container">
 
-  <div class="row" >
-    <div class="col-sm-2"> 
-     
-    </div>
-    <div class="col-sm-8">
+  <div class="form-column">
+    <div class="">
        
-      <div class="formbackground row">
+      <div class="formbackground">
         <ul class="nav nav-tabs navdesign" id="myTab">
           <li class="active"><a href="#sectionA">ADD A COMPANY</a></li>
           <li><a href="#sectionB">EMAIL TO SOMEONE</a></li>
@@ -15,21 +12,28 @@
           <div id="sectionA" class="tab-pane fade in active">
             <%= simple_form_for(@company) do |f| %>
               <%= f.error_notification %>
+              <div class="form-group form-label col-lg-12 col-md-12">
+                <h4 class="">Company Information</h4>
+              </div>
               <%= f.input :name %>
               <%= f.input :url, label: 'Website' %>
               <%= f.input :employees_count, label: '# of Employees' %>
-              <%= f.input :total_funding, hint: 'Number in thousands of dollars' %>
+              <%= f.input :total_funding, hint: 'Number in thousands of dollars', placeholder: 'Example: 4000' %>
               <%= f.input :stage %>
               <%= f.input :year_founded, start_year: Date.today.year - 15,
                                          end_year: Date.today.year,
                                          discard_hour: true, 
                                          discard_day: true, 
                                          discard_month: true %>
-              <%= f.input :total_founders %>
-              <%= f.input :veteran_founders %>
-              <%= f.input :veteran_executives, label: 'Veteran Executives?' %>
-
-              <%= f.button :submit, class: "button-blue submit-button" %>
+              <div class="form-group form-label col-lg-12 col-md-12">
+                <h4 class="">Veteran-Led Startup Qualification</h4>
+              </div>
+              <%= f.input :total_founders, placeholder: 'Number of Company Founders' %>
+              <%= f.input :veteran_founders, placeholder: 'Number of Veteran Founders' %>
+              <%= f.input :veteran_executives, label: 'Veteran Executives?', hint: 'Do Veterans hold executive leadership positions? Including: CEO, CTO, CFO, CXO, VP of Engineering, VP of Operations, or similar position?' %>
+              <div class="form-group clearfix">
+                <%= f.button :submit, class: "button-blue submit-button" %>
+              </div>
             <% end %> 
           </div>
 
@@ -40,7 +44,7 @@
 
 
             <form class='email-form-inputs'>
-              <div class="form-group string optional person_name">
+              <div class="form-group input-group-lg string optional person_name">
                 <div class="form-label col-lg-3 col-md-3"><label class="string optional" for="person_name">Ask this person</label></div>
                 <div class="form-input col-lg-9 col-md-9"><input class="string optional form-control" type="text" name="name" id="person_name" placeholder="Name"></div>
               </div>
@@ -60,7 +64,9 @@
                 <div class="form-label col-lg-3 col-md-3"><label class="string optional" for="your_email">Your Email</label></div>
                 <div class="form-input col-lg-9 col-md-9"><input class="string optional form-control" type="text" name="email" id="your_email" placeholder="veteran.supporter@example.com"></div>
               </div>
-              <input type="submit" value="Send Email" class="button-blue submit-button">
+              <div class="form-group clearfix">
+                <input type="submit" value="Send Email" class="button-blue submit-button">
+              </div>
             </form>
 
           </div>
@@ -69,7 +75,6 @@
       </div>
     </div>
   
-  <div class="col-sm-2"> </div>
   </div>
-  </div>
+</div>
 
