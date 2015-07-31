@@ -1,0 +1,8 @@
+<nav class="main-nav">
+  <a href="/mission" class="main-nav-btn <%= 'main-nav-btn-active' if @on_mission_page %>">Mission</a>
+  <a href="/companies" class="main-nav-btn <%= 'main-nav-btn-active' if @company || @companies %>">List</a>
+  <a href="/research" class="main-nav-btn <%= 'main-nav-btn-active' if @on_research_page %>">Research</a>
+  <%- if @company.present? %>
+    <div><a href="/companies" class="returntolist"><i class="fa fa-arrow-left"></i> <u>Return to List</u></a></div>
+  <%- end %>
+</nav>
