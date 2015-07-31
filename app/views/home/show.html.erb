@@ -2,16 +2,12 @@
   <div id="welcome-area">
     <div id="home-cover-area">
       <div id="welcome-background"></div>
-      <nav class="main-nav">
-        <a href="/mission" class="main-nav-btn">Mission</a>
-        <a href="/companies" class="main-nav-btn">List</a>
-        <a href="/research" class="main-nav-btn">Research</a>
-      </nav>
+      <%= render partial: 'layouts/main_nav' %>
 
       <div id="welcome-content">
-        <h1 class="welcome-tagline">Welcome to Veterans List</h1>
-        <h2 class="welcome-subtagline">The authoritative source for veteran-led startups</h2>
-        <%= link_to "View Companies", companies_path, class: 'btn view-companies-button' %>
+        <h1 class="welcome-tagline">Connection Builds Community</h1>
+        <h2 class="welcome-subtagline">Identifying Veteran-led Startups is the first step to connecting them</h2>
+        <%= link_to "Submit a Company", new_company_path, class: 'btn button-blue new-company-button' %>
       </div>
     </div>
   </div>
