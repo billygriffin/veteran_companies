@@ -2,12 +2,19 @@
   border: 0;
 }
 
-.form-input,
-.form-label {
+.form-input {
   margin-top: 10px;
+}
+
+.form-label {
+  padding-top: 15px;
 }
 
 .submit-button {
   display: block;
   margin: 20px auto;
+}
+
+abbr[title="required"] {
+  display: none;
 }

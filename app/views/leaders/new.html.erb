@@ -1,14 +1,23 @@
 <div class="container leaders-form">
-  <%= simple_form_for(@leader) do |f| %>
-    <%= f.error_notification %>
-    <%= f.hidden_field :company_id, value: @company.id  %>
 
-    <div class="leader-form-inputs">
-      <%= f.input :name, input_html: {name: 'name[]'} %>
-      <%= f.input :url, input_html: {name: 'url[]'}, label: 'LinkedIn URL' %>
+  <div class="row" >
+    <div class="col-sm-2"> 
+     
     </div>
-    <div class="btn add-new-leader-button">Add Row</div>
+    <div class="col-sm-8">
+      <h1 class='sublistheading'>Add Veteran Leaders for <%= @company.name %></h1>
+      <%= simple_form_for(@leader) do |f| %>
+        <%= f.error_notification %>
+        <%= f.hidden_field :company_id, value: @company.id  %>
 
-    <%= f.button :submit %>
-  <% end %>
+        <div class="leader-form-inputs">
+          <%= f.input :name, input_html: {name: 'name[]'}, label: 'Veteran Name' %>
+          <%= f.input :url, input_html: {name: 'url[]'}, label: 'LinkedIn URL' %>
+        </div>
+        <div class="btn add-new-leader-button">Add Another Veteran Leader</div>
+
+        <%= f.button :submit, 'Submit Leader(s)', class: 'button-blue submit-button' %>
+      <% end %>
+    </div>
+  </div>
 </div>
