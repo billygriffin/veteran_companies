@@ -1,10 +1,10 @@
-<div class="container margin_bottom">
+<div class="container">
 
   <div class="row" >
     <div class="col-sm-2"> 
      
     </div>
-    <div class="col-sm-8 " >
+    <div class="col-sm-8">
        
       <div class="formbackground row">
         <ul class="nav nav-tabs navdesign" id="myTab">
@@ -27,11 +27,9 @@
                                          discard_month: true %>
               <%= f.input :total_founders %>
               <%= f.input :veteran_founders %>
-              <%= f.input :veteran_executives %>
+              <%= f.input :veteran_executives, label: 'Veteran Executives?' %>
 
-              <div class="form-group string optional your_email">
-                <%= f.button :submit, class: "button-blue" %>
-              </div>
+              <%= f.button :submit, class: "button-blue submit-button" %>
             <% end %> 
           </div>
 
@@ -62,9 +60,7 @@
                 <div class="form-label col-lg-3 col-md-3"><label class="string optional" for="your_email">Your Email</label></div>
                 <div class="form-input col-lg-9 col-md-9"><input class="string optional form-control" type="text" name="email" id="your_email" placeholder="veteran.supporter@example.com"></div>
               </div>
-              <div class="form-group string optional your_email">
-                <input type="submit" value="Submit" class="button-blue">
-              </div>
+              <input type="submit" value="Send Email" class="button-blue submit-button">
             </form>
 
           </div>
