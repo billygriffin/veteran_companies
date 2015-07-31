@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container new-company-forms">
 
   <div class="form-column">
     <div class="">
@@ -13,11 +13,11 @@
             <%= simple_form_for(@company) do |f| %>
               <%= f.error_notification %>
               <div class="form-group form-label col-lg-12 col-md-12">
-                <h4 class="">Company Information</h4>
+                <h4 class="new-company-header">Company Information</h4>
               </div>
-              <%= f.input :name %>
-              <%= f.input :url, label: 'Website' %>
-              <%= f.input :employees_count, label: '# of Employees' %>
+              <%= f.input :name, label: '# of Employees', placeholder: 'Company Name' %>
+              <%= f.input :url, label: 'Company Website', placeholder: 'http://www.veterancompanyurl.com' %>
+              <%= f.input :employees_count, label: '# of Employees', placeholder: 'Ex: 10' %>
               <%= f.input :total_funding, hint: 'Number in thousands of dollars', placeholder: 'Example: 4000' %>
               <%= f.input :stage %>
               <%= f.input :year_founded, start_year: Date.today.year - 15,
@@ -26,11 +26,11 @@
                                          discard_day: true, 
                                          discard_month: true %>
               <div class="form-group form-label col-lg-12 col-md-12">
-                <h4 class="">Veteran-Led Startup Qualification</h4>
+                <h4 class="new-company-header last-company-header">Veteran-Led Startup Qualification</h4>
               </div>
               <%= f.input :total_founders, placeholder: 'Number of Company Founders' %>
               <%= f.input :veteran_founders, placeholder: 'Number of Veteran Founders' %>
-              <%= f.input :veteran_executives, label: 'Veteran Executives?', hint: 'Do Veterans hold executive leadership positions? Including: CEO, CTO, CFO, CXO, VP of Engineering, VP of Operations, or similar position?' %>
+              <%= f.input :veteran_executives, as: :radio_buttons, label: 'Veteran Executives?', hint: 'Do Veterans hold executive leadership positions? Including: CEO, CTO, CFO, CXO, VP of Engineering, VP of Operations, or similar position?' %>
               <div class="form-group clearfix">
                 <%= f.button :submit, class: "button-blue submit-button" %>
               </div>

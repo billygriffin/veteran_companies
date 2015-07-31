@@ -23,3 +23,22 @@
   max-width: 800px;
   margin: 0 auto;
 }
+
+.new-company-header {
+  margin: 0;
+  font-style: italic;
+}
+
+.last-company-header {
+  margin-top: 10px;
+}
+
+.new-company-forms {
+  .form-group {
+    margin-bottom: 0;
+  }
+}
+
+.radio-inline {
+  padding-top: 5px;
+}
