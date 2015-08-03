@@ -15,10 +15,10 @@
               <div class="form-group form-label col-lg-12 col-md-12">
                 <h4 class="new-company-header">Company Information</h4>
               </div>
-              <%= f.input :name, label: '# of Employees', placeholder: 'Company Name' %>
+              <%= f.input :name, label: 'Company', placeholder: 'Company Name' %>
               <%= f.input :url, label: 'Company Website', placeholder: 'http://www.veterancompanyurl.com' %>
               <%= f.input :employees_count, label: '# of Employees', placeholder: 'Ex: 10' %>
-              <%= f.input :total_funding, hint: 'Number in thousands of dollars', placeholder: 'Example: 4000' %>
+              <%= f.input :total_funding, hint: 'Number in thousands of dollars', placeholder: 'Ex: 4000 for $4 million' %>
               <%= f.input :stage %>
               <%= f.input :year_founded, start_year: Date.today.year - 15,
                                          end_year: Date.today.year,
@@ -40,9 +40,6 @@
 
           <!-- Email form -->
           <div id="sectionB" class="tab-pane fade">
-
-
-
             <form class='email-form-inputs'>
               <div class="form-group input-group-lg string optional person_name">
                 <div class="form-label col-lg-3 col-md-3"><label class="string optional" for="person_name">Ask this person</label></div>
