@@ -6,6 +6,8 @@ class Company < ActiveRecord::Base
   has_many :affiliations, dependent: :destroy
   has_many :organizations, through: :affiliations
 
+  default_scope -> { order(:name) }
+
   def self.published
     where(status: 'published')
   end
