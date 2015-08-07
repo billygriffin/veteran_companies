@@ -33,6 +33,7 @@ Rails.application.routes.draw do
 
   get '/mission' => 'mission#show'
   get '/research' => 'research#show'
+  get '/infographic' => 'research#infographic'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
