@@ -26,19 +26,7 @@ Adminsimple.setup do |config|
       n.item n.t('adminsimple.main_nav.companies'), proc{ admin_companies_path }, icon: 'folder', highlights_on: [{controller: 'admin/companies'}], label: proc { Company.pending.count }
       n.item n.t('adminsimple.main_nav.leaders'), proc{ admin_leaders_path }, icon: 'folder', highlights_on: [{controller: 'admin/leaders'}]
       n.item n.t('adminsimple.main_nav.organizations'), proc{ admin_organizations_path }, icon: 'folder', highlights_on: [{controller: 'admin/organizations'}]
-      # n.item n.t('adminsimple.main_nav.base_locations'), proc{ admin_base_locations_path }, icon: 'folder', highlights_on: [{controller: 'admin/base_locations'}]
-      # n.item n.t('adminsimple.main_nav.establishments'), proc{ admin_establishments_path }, icon: 'folder', highlights_on: [{controller: 'admin/establishments'}]
-      # n.item n.t('adminsimple.main_nav.reviews'), proc{ admin_reviews_path }, icon: 'folder', highlights_on: [{controller: 'admin/reviews'}], label: proc { Review.pending.count }
-      # n.item n.t('adminsimple.main_nav.photos'), proc{ admin_photos_path }, icon: 'folder', highlights_on: [{controller: 'admin/photos'}], label: proc { Photo.pending.count }
-      # n.item n.t('adminsimple.main_nav.categories'), proc{ admin_categories_path }, icon: 'folder', highlights_on: [{controller: 'admin/categories'}]
-      # n.item n.t('adminsimple.main_nav.regional_designations'), proc{ admin_regional_designations_path }, icon: 'folder', highlights_on: [{controller: 'admin/regional_designations'}]
-      # n.item n.t('adminsimple.main_nav.posts'), proc{ admin_posts_path }, icon: 'folder', highlights_on: [{controller: 'admin/posts'}]
-      # n.item n.t('adminsimple.main_nav.movies'), proc{ admin_movies_path }, icon: 'folder', highlights_on: [{controller: 'admin/movies'}]
-      # n.item n.t('adminsimple.main_nav.users'), proc{ admin_users_path }, icon: 'folder', highlights_on: [{controller: 'admin/users'}]
-      # n.item n.t('adminsimple.main_nav.admins'), proc{ admin_admins_path }, icon: 'folder', highlights_on: [{controller: 'admin/admins'}]
-      # n.item n.t('adminsimple.main_nav.issues'), proc{ admin_issues_path }, icon: 'frown-o', highlights_on: [{controller: 'admin/issues'}], label: proc { Issue.open.count }
 
-      # n.item n.t('adminsimple.main_nav.sidekiq'), proc{ admin_sidekiq_path }, icon: 'tasks', highlights_on: [{controller: 'admin/sidekiq'}]
       if Rails.env.development?
         n.group n.t('adminsimple.main_nav.style_guide'), icon: 'info-circle' do
           n.item n.t('adminsimple.main_nav.forms'), proc{ adminsimple.styleguide_path('forms') }, icon: 'th-list'
