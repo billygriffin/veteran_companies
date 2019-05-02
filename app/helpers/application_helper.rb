@@ -1,4 +1,4 @@
-module ApplicationHelper
+module ApplicationHelper # test
 
   def bootstrap_class_for flash_type
     case flash_type
